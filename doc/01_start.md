@@ -136,13 +136,29 @@ Redis 是一个高性能的键值存储数据库，常用于缓存和会话管�
 
 ## 文档目录
 
+### 第一阶段：NestJS 基础
 | 序号 | 文件名 | 说明 | 状态 |
 |------|--------|------|------|
 | 01 | 01_start.md | 学习指南与总览（本文档） | ✅ |
-| 02 | 02_nestjs_overview.md | NestJS 概览与快速开始 | 📝 |
-| 03 | 03_mysql_basics.md | MySQL 数据库基础 | 📝 |
-| 04 | 04_redis_basics.md | Redis 基础 | 📝 |
-| 05 | 05_deployment.md | 服务端部署基础 | 📝 |
+| 02 | 02_nestjs_overview.md | NestJS 概览与快速开始 | ✅ |
+| 03 | 03_nestjs_core.md | Controller、Service、Module | ✅ |
+| 04 | 04_nestjs_di.md | 依赖注入与 Provider | ✅ |
+| 05 | 05_nestjs_middleware.md | 中间件、拦截器、管道、守卫 | ✅ |
+
+### 第二阶段：数据库操作
+| 序号 | 文件名 | 说明 | 状态 |
+|------|--------|------|------|
+| 10 | 10_mysql_basics.md | MySQL 基础与 SQL 语法 | ✅ |
+
+### 第三阶段：Redis 缓存
+| 序号 | 文件名 | 说明 | 状态 |
+|------|--------|------|------|
+| 20 | 20_redis_basics.md | Redis 基础与数据类型 | ✅ |
+
+### 第五阶段：部署与运维
+| 序号 | 文件名 | 说明 | 状态 |
+|------|--------|------|------|
+| 40 | 40_deployment_basics.md | 服务端部署基础 | ✅ |
 
 > ✅ 已完成 | 📝 待编写 | 🚧 进行中
 

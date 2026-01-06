@@ -368,9 +368,9 @@ export class UserService {
 
 完成本文档后，建议按以下顺序继续学习：
 
-1. **03_nestjs_core.md** - 深入理解 Controller、Service、Module
-2. **04_nestjs_di.md** - 依赖注入与自定义 Provider
-3. **05_nestjs_middleware.md** - 中间件、拦截器、管道、守卫
+1. [03_nestjs_core.md](./03_nestjs_core.md) - 深入理解 Controller、Service、Module
+2. [04_nestjs_di.md](./04_nestjs_di.md) - 依赖注入与自定义 Provider
+3. [05_nestjs_middleware.md](./05_nestjs_middleware.md) - 中间件、拦截器、管道、守卫
 
 ---
 

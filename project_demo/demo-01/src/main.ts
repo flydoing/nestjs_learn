@@ -2,8 +2,21 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
+  // 记录启动开始时间
+  const startTime = Date.now();
+  const startTimestamp = new Date().toISOString();
+  console.log(`\n🚀 [${startTimestamp}] 应用启动中...`);
+
   const app = await NestFactory.create(AppModule);
-  await app.listen(process.env.PORT ?? 3000);
+  
+  const port = process.env.PORT ?? 3000;
+  await app.listen(port);
+
+  // 计算启动耗时
+  const duration = Date.now() - startTime;
+  console.log(`✅ [${new Date().toISOString()}] 应用启动完成`);
+  console.log(`📊 启动耗时: ${duration}ms`);
+  console.log(`🌐 服务地址: http://localhost:${port}\n`);
 }
 bootstrap();
 

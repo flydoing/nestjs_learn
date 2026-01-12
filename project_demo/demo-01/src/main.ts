@@ -4,8 +4,7 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   // 记录启动开始时间
   const startTime = Date.now();
-  const startTimestamp = new Date().toISOString();
-  console.log(`\n🚀 [${startTimestamp}] 应用启动中...`);
+  console.log(`\n🚀 [${new Date().toISOString()}] 应用启动中...`);
 
   const app = await NestFactory.create(AppModule);
   

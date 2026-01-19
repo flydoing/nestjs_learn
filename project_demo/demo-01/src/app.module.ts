@@ -1,9 +1,14 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { UserModule } from './user/user.module';
 
 @Module({
-  imports: [],
+  /**
+   * imports - 导入功能模块
+   * UserModule 已通过 nest g resource user 创建
+   */
+  imports: [UserModule],
   controllers: [AppController],
   providers: [AppService],
 })
@@ -73,6 +78,7 @@ import { Module, CacheModule } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { ScheduleModule } from '@nestjs/schedule';
 import { ThrottlerModule } from '@nestjs/throttler';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [

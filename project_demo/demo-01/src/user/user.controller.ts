@@ -1,4 +1,14 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+  Headers,
+  Ip,
+} from '@nestjs/common';
 import { UserService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
@@ -43,9 +53,24 @@ export class UserController {
    * @route   GET /api/v1/user/:id
    * @url     http://localhost:3000/api/v1/user/1
    * @param   id - 用户ID（路径参数）
+   * @headers 可获取 authorization、user-agent 等请求头
    */
   @Get(':id')
-  findOne(@Param('id') id: string) {
+  findOne(
+    @Param('id') id: string,
+    @Headers() headers: Record<string, string>, // 获取所有请求头
+    @Headers('user-agent') userAgent: string, // 获取指定请求头
+    @Ip() ip: string, // 获取客户端 IP
+  ) {
+    // 打印请求信息
+    console.log('========== 请求信息 ==========');
+    console.log('用户ID:', id);
+    console.log('客户端IP:', ip);
+    console.log('User-Agent:', userAgent);
+    console.log('Authorization:', headers['authorization'] || '未提供');
+    console.log('所有Headers:', JSON.stringify(headers, null, 2));
+    console.log('==============================');
+
     return this.userService.findOne(+id);
   }
 

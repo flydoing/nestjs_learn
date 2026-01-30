@@ -18,7 +18,7 @@ import {
  * - 先检查 @IsNotEmpty（字段是否存在）
  * - 再检查类型和格式
  *
- * 使用前需安装：npm install class-validator class-transformer
+ * 依赖包：class-validator、class-transformer（已安装）
  */
 export class CreateUserDto {
   /**
